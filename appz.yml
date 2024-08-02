@@ -1,8 +1,7 @@
 app:
   name: wordpress
   code: wordpress
-  notify: appzdev@cloudbourne.co
-
+  notify: srswain@ecloudcontrol.com
 build:
   version: 5.5
   env: DEV
@@ -11,7 +10,7 @@ build:
   image_template: wordpress-5.5
 
 deploy:
-  context: alpha/DEV
+  context: sranjan1995/DEV
   replicas: 1
   type: statefulset
   port:
@@ -40,7 +39,7 @@ properties:
   ADMIN_EMAIL: appzdev@cloudbourne.co
   SITE_TITLE: "Wordpress AppZ Workshop Demo"
   MYSQL_PASSWORD:
-     vault: MYSQL_PASSWORD_KEY
+     vault: MYSQL_PASSWORD
   #Generate hash at https://ehikioya.com/wordpress-password-hash-generator/
   ADMIN_PASSWORD_HASH: $P$BAeYgHEtHyCT335q2Iya9JL4CtKHc1/
-  revision : 82
+  revision : 1
