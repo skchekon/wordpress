@@ -29,7 +29,7 @@ volumes:
 properties:
   ENABLE_HA: "no"  
   #if HA is disabled
-  MYSQL_HOST : "mariadb-master-10-4:3306"
+  MYSQL_HOST : "mysql-5-7:3306"
   #if HA is enabled
   #MYSQL_MASTER_HOST : "mariadb-master-10-4:3306"
   #MYSQL_SLAVE_HOST : "mariadb-slave-10-4:3306"
